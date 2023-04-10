@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./styles/questions.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+
+<body>
+    <header class="header">
+        <div>
+            <a href="https://kahoot.com/" target="_blank"><img class="logo" src="./assets/imgs/Captura de tela 2023-04-09 120040.png" alt="logo"></a>
+        </div>
+        <div class="login">
+            <h4>Hello, anyone! Let's play!</h4>
+        </div>
+        <div class="search">
+            <input class="input-header" type="text" placeholder="Enter your doubt...">
+            <button class="btn-search">Search</button>
+        </div>
+        <div class="btns">
+            <form class="form" action="./donePage.html">
+                <input type="submit" class="btn btn-white" value="Exit" />
+                <input type="submit" class="btn" style="background-color: rgb(6, 159, 6)" value="Done" />
+            </form>
+        </div>
+    </header>
+    <main class="main">
+        <div class="aside1">
+            <div class="score">
+                <h2>Last Score</h2>
+                <h3>10</h3>
+            </div>
+            <div class="publi">
+                <a href="https://globoplay.globo.com/" target="_blanck"><img src="./assets/imgs/anuncios-globoplay-revolta-internautas_6628.jpeg" class="img" alt="anuncio-globo"></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <h1 id="question-title"></h1>
+            </div>
+
+            <div>
+                <img class="img" id="question-image" src="./assets/imgs/descobrimento-brasil.webp" alt="">
+            </div>
+
+            <div class="options">
+                <label class="option option--red">
+                    A) Shakira <input class="option--red" type="radio" id="contactChoice" name="contact"/>
+                </label>
+                <label class="option option--blue">
+                    B) São Jorge <input class="option--blue" type="radio" id="contactChoice" name="contact" />
+                </label>
+                <label class="option option--orange">
+                    C) Goku <input class="option--orange" type="radio" id="contactChoice" name="contact" />
+                </label>
+                <label class="option option--green">
+                    D) Pedro Alvares Cabral<input class="option--green" type="radio" id="contactChoice"
+                        name="contact"/>
+                </label>
+            </div>
+        </div>
+        <div class="aside2">
+            <div class="help">
+                <button class="btn option--red">CARTA CORINGA</button>
+                <button class="btn option--blue">AJUDA UNIVERSITÁRIA</button>
+                <button class="btn option--orange">PULA 1</button>
+                <button class="btn option--green">REVELAR</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="./scripts/index.js"></script>
+
+</html>
