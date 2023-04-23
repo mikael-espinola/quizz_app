@@ -169,7 +169,7 @@ body {
     gap: 0.2rem;
 }
 
-.option {
+.question-options {
     display: flex;
     justify-content: space-between;
     padding: 1.8rem;
