@@ -152,3 +152,10 @@ aside {
 .btn:hover {
     border: #151111 solid 3px;
 }
+
+footer {
+    height: 60vh;
+    display: flex;
+    justify-content: center ;
+    align-items: flex-end;
+}
