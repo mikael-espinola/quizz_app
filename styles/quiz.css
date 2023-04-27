@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(220, 227, 229, 0.501);
+    height: 100vh;
+    
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#cabecalho {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    background-color: #FFF;
+    box-shadow: 10px 5px 5px rgb(212, 207, 207);
+}
+
+.header-btn {
+    display: flex;
+    align-items: center;
+}
+
+#exit-btn {
+    margin-right: 5rem;
+    background-color: rgb(201, 94, 94);
+}
+
+#done-btn {
+    margin-right: 1.5rem;
+    background-color: rgb(96, 218, 155);
+}
+
+.btn1 {
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+#logo {
+    width: 10rem;
+    height: 3.7rem;
+    padding-left: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.body {
+    background-color: rgba(220, 227, 229, 0.501);    width: 90vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+
+aside {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+#current-score {
+    border: #151111 2px solid;
+    padding: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+#quiz {
+    background-color: rgba(220, 227, 229, 0.501);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 15vh;
+    width: 90%;
+    box-shadow: 10px 5px 5px rgb(212, 207, 207);
+    background-color: #FFF;
+    margin-top: 1rem;
+}
+
+#img {
+    width: 40rem;
+    height: 22rem;
+    padding: 1.8rem;
+}
+
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60vw;
+    gap: 0.2rem;
+}
+
+.question-options {
+    display: flex;
+    justify-content: center;
+    padding: 1.8rem;
+    align-items: center;
+    border-radius: initial;
+}
+
+.option--red {
+    background-color: rgb(214, 48, 48);
+}
+
+.option--blue {
+    background-color: blue;
+}
+
+.option--orange{
+    background-color: orange;
+}
+
+.option--green {
+    background-color: green;
+}
+
+.helper {
+    height: 55%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.btn {
+    padding: 2rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 1.5rem;
+}
+
+.btn:hover {
+    border: #151111 solid 3px;
+}
