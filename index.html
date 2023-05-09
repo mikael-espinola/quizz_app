@@ -1,30 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Quiz app</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
-  <script src='scripts/main.js' type="module"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./styles/quiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
 </head>
+<header>
+    <div id="cabecalho">
+        <img id="logo" src="./assets/imgs/Captura de tela 2023-04-09 120040.png" alt="Logo">
+        <div class="header-btn">
+            <button id="exit-btn" class="btn1">Exit</button>
+            <button id="done-btn" class="btn1">Done!</button>
+        </div>
+    </div>
+</header>
+
 <body>
-  <header>
-    <h1>Quiz de perguntas</h1>
-  </header>
-  <main class="user-form">
-    <form id="formulario_usuario">
-      <h2>Por favor, identifique-se</h2>
-      <label>
-        First name
-        <input name="firstname" required="required" />
-      </label>
-      <label>
-        Email
-        <input name="email" required="required" type="email" />
-      </label>
-      <button type="submit">Start</button>
-    </form>
-  </main>
+    <div class="container">
+        <div class="body">
+            <aside>
+                <h2>SCORE</h2>
+                <h3 id="current-score"></h3>
+            </aside>
+            <main id="quiz">
+                <div class="box">
+                    <h1 id="question-title">WHO ARE YOU ????!</h1>
+                </div>
+                <div>
+                    <img id="img" id="question-image" src="./assets/imgs/descobrimento-brasil.webp" alt="">
+                </div>
+
+                <div class="options">
+                    <button id="option--red" class="btn question-options option--red "></button>
+                    <button id="option--blue" class="btn question-options option--blue "></button>
+                    <button id="option--orange" class="btn question-options option--orange "></button>
+                    <button id="option--green" class="btn question-options option--green "></button>
+                </div>
+            </main>
+            <aside class="helper">
+                <div></div>
+                <button class="btn1 option--red">WILD CARD</button>
+                <button class="btn1 option--blue">SOMEONE TO HELP</button>
+                <button class="btn1 option--orange">THX, NEXT</button>
+                <button class="btn1 option--green">SHOW UP!</button>
+            </aside>
+        </div>
+    </div>
+
 </body>
+
+<footer class="footer">
+    <h5>Created by Mikael Espinola © 2023</h4>
+</footer>
+
+<script src="./scripts/index.js"></script>
+
 </html>
