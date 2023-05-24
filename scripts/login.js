@@ -8,7 +8,7 @@ startBtn.addEventListener("click", (e) => {
     userInfo.push(name.value, email.value)
     // console.log(userInfo)
     localStorage.setItem("user", name.value)
-    window.location.href = "index.html"
+    window.location.href = "quiz.html"
 })
 
 // users = []
