@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./styles/quiz.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
 </head>
 <header>
     <div id="cabecalho">
         <img id="logo" src="./assets/imgs/Captura de tela 2023-04-09 120040.png" alt="Logo">
+        <div class="user">
+            <i class="fa-solid fa-face-smile-beam"></i>
+            <label id="userName"></label>
+        </div>
         <div class="header-btn">
-            <button id="exit-btn" class="btn1">Exit</button>
-            <button id="done-btn" class="btn1">Done!</button>
+            <button id="exitBtn" class="btn1">Exit</button>
+            <button id="doneBtn" class="btn1">Done!</button>
         </div>
     </div>
 </header>
@@ -27,7 +32,7 @@
             </aside>
             <main id="quiz">
                 <div class="box">
-                    <h1 id="question-title">WHO ARE YOU ????!</h1>
+                    <h1 id="question-title"></h1>
                 </div>
                 <div>
                     <img id="img" id="question-image" src="./assets/imgs/descobrimento-brasil.webp" alt="">
@@ -47,6 +52,13 @@
                 <button class="btn1 option--orange">THX, NEXT</button>
                 <button class="btn1 option--green">SHOW UP!</button>
             </aside>
+        </div>
+        <div class="modal">
+            <section class="modalText"><h1>Are you sure you want to quit?</h1></section>
+            <div class="modalBtns">
+                <input id="yesBtn" type="button" value="YES">
+                <input id="noBtn" type="button" value="NO">
+            </div>
         </div>
     </div>
 

@@ -1,32 +1,25 @@
-function renderQuestion(question, onSelectQuestion, score) {
+function renderQuestion(question, onSelectQuestion) {
     const title = question.question;
     const incorrect_answers = question.incorrect_answers.map(function (answer) {
         return buildOptionObj(answer, false)
     })
     // question.incorrect_answers.map((answer) => buildOptionObj(answer, false) ) arrow function way
+
+
+    const userName = localStorage.getItem("user")
+    console.log(userName)
+    document.querySelector("#userName").innerHTML = "Let's play, " + userName + "!"
+
     const correct_answer = buildOptionObj(question.correct_answer, true)
 
     document.getElementById("question-title").innerHTML = title;
 
     const options = [...incorrect_answers, correct_answer].sort(() => Math.random() - 0.5);
 
-
-    updateScore(score)
+    updateScore()
     questionManipulator(options, onSelectQuestion)
 }
 
-// function noRepeat(questions) {
-//     const showedQuestions = {};
-
-//     questions.forEach((question) => {
-//         if(!showedQuestions[question.id]) {
-//             const title = question.question;
-//             document.getElementById("question-title").innerHTML = title;
-
-//             showedQuestions[question.id] = true;
-//         }
-//     })
-// }
 
 function questionManipulator(options, onSelectQuestion) {
     const optionRed = document.getElementById("option--red")
@@ -37,7 +30,7 @@ function questionManipulator(options, onSelectQuestion) {
 
 
     // distribuindo cada opção a um botão e observando o click que chama a função para pontuar.
-    for (i = 0; i < optionElements.length; i++) {
+    for (let i = 0; i < optionElements.length; i++) {
         const option = options[i];
         const optionElement = optionElements[i];
 
@@ -46,20 +39,26 @@ function questionManipulator(options, onSelectQuestion) {
     }
 }
 
-function updateScore(score) {
+function updateScore() {
     const currentScore = score >= 0 ? score : 0; //operador ternário
     document.getElementById("current-score").innerHTML = currentScore;
+    localStorage.setItem("score", currentScore)
 }
 
 let score = 0;
 
 function onSelectQuestion(option) {
+    const newQuestion = questions.splice(0, 1)[0]
+    console.log(newQuestion)
     if (option.isCorrect === true) {
         score += 5;
-        renderQuestion(questions[Math.floor(Math.random() * questions.length)], onSelectQuestion, score);
-    } else {
+        renderQuestion(newQuestion, onSelectQuestion);
+    } else if (option.isCorrect !== true) {
         score -= 1;
-        renderQuestion(questions[Math.floor(Math.random() * questions.length)], onSelectQuestion, score)
+        renderQuestion(newQuestion, onSelectQuestion);
+    } else {
+        score = 0;
+        renderQuestion(newQuestion, onSelectQuestion);
     }
 }
 
@@ -403,7 +402,31 @@ const questions = [{
     "incorrect_answers": ["Roger Taylor", "Brian May", "John Deacon"]
 }];
 
+// checkout section 
+const modal = document.querySelector(".modal")
 
-let questionTotal = (questions.length)
+const doneBtn = document.querySelector("#doneBtn")
+doneBtn.addEventListener("click", () => {
+    window.location.href = "donePage.html"
+})
+// checkout section 
 
-renderQuestion(questions[Math.floor(Math.random() * questions.length)], onSelectQuestion)
+// modal section 
+const exitBtn = document.querySelector("#exitBtn")
+exitBtn.addEventListener("click", () => {
+    modal.classList.toggle("modal--active")
+})
+
+document.querySelector("#yesBtn").onclick = () => {
+    window.location.href = "login.html";
+    localStorage.clear()
+}
+
+document.querySelector("#noBtn").onclick = () => {
+    modal.classList.toggle("modal--active")
+}
+// modal section
+
+const newQuestion = questions.splice(0, 1)[0]
+renderQuestion(newQuestion, onSelectQuestion)
+

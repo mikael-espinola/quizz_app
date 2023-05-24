@@ -9,17 +9,21 @@
 </head>
 <body>
     <div class="container">
-        <video autoplay muted loop>
+        <!-- <video autoplay muted loop>
             <source src="./assets/videos/after-done-video.mp4" type="video/mp4">
-        </video>    
+        </video>     -->
         <div class="content">
-            <div class="score">
-                <h2>SCORE: </h2>
+            <div class="results">
+                <label id="userName"></label>
+                <label id="score"></label>
                 <h2 class="lastValue"></h2>
             </div>
-            <input type="button" value="Replay">
-            <input type="button" value="Finish">
+            <input id="replayBtn" type="button" value="Replay">
+            <input id="finishBtn" type="button" value="Finish">
+            
+            
         </div>
     </div>
 </body>
+<script src="./scripts/done.js"></script>
 </html>
