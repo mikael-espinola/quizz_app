@@ -418,7 +418,7 @@ exitBtn.addEventListener("click", () => {
 })
 
 document.querySelector("#yesBtn").onclick = () => {
-    window.location.href = "login.html";
+    window.location.href = "index.html";
     localStorage.clear()
 }
 

@@ -12,7 +12,7 @@ const finishBtn = document.querySelector("#finishBtn")
 
 replayBtn.addEventListener("click", () => {
     console.log("passei aqui")
-    window.location.href = "login.html";
+    window.location.href = "index.html";
     localStorage.clear();
 })
 finishBtn.addEventListener("click", () => {
