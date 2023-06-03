@@ -12,6 +12,14 @@ body {
     width: 100%;
 }
 
+#img-capa {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 header {
     display: flex;
     justify-content: center;
@@ -63,8 +71,8 @@ header {
 }
 
 .body {
-    background-color: rgba(220, 227, 229, 0.501);    width: 90vw;
-    height: 50vh;
+    background-color: rgb(162, 180, 185);    width: 90vw;
+    height: 60vh;
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
 }
@@ -78,14 +86,13 @@ aside {
 }
 
 #current-score {
-    border: #151111 2px solid;
     padding: 0.9rem;
     margin-top: 0.5rem;
     font-family: 'Pangolin', cursive;
 }
 
 #quiz {
-    background-color: rgba(220, 227, 229, 0.501);
+    background-color: rgb(220, 227, 229);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,11 +103,15 @@ aside {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 15%;
+    height: 20%;
     width: 90%;
     box-shadow: 10px 5px 5px rgb(212, 207, 207);
     background-color: #FFF;
     margin-top: 1rem;
+}
+
+#question-title { 
+    font-size: 1.5rem;
 }
 
 #img {
@@ -153,6 +164,7 @@ aside {
     cursor: pointer;
     color: white;
     border-radius: 1.5rem;
+    margin-bottom: 5px;
 }
 
 .btn:hover {

@@ -3,22 +3,17 @@ body {
     padding: 0;
     font-family: "Big Shoulders Display", cursive;
     height: 100px;
+    background-color: rgba(137, 43, 226, 0.294);
   }
   .container {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .container video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    width: 100%;
-  }
+ 
   .container .content {
     position: relative;
     z-index: 1;
@@ -48,3 +43,32 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
+
+  #userName,
+  #score {
+    font-size: 30px;
+  }
+
+  input {
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  input:hover {
+    background-color: blueviolet;
+    transition: 0.5s;
+    color: white;
+    
+  }
+
+  #replayBtn {
+    margin-right: 8px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center ;
+    align-items: flex-end;
+}

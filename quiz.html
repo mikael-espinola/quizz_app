@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./styles/quiz.css">
+    <link rel="stylesheet" href="styles/loadingStyle.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
 </head>
 <header>
+    <img id="img-capa" src="./assets/imgs/capa-login.jpg" alt="">
     <div id="cabecalho">
         <img id="logo" src="./assets/imgs/Captura de tela 2023-04-09 120040.png" alt="Logo">
         <div class="user">
@@ -54,11 +56,26 @@
             </aside>
         </div>
         <div class="modal">
-            <section class="modalText"><h1>Are you sure you want to quit?</h1></section>
+            <section class="modalText">
+                <h1>Are you sure you want to quit?</h1>
+            </section>
             <div class="modalBtns">
                 <input id="yesBtn" type="button" value="YES">
                 <input id="noBtn" type="button" value="NO">
             </div>
+        </div>
+    </div>
+
+    <div class="loading">
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
 
