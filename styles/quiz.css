@@ -18,12 +18,12 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
 header {
     display: flex;
     justify-content: center;
-    
+
 }
 
 #cabecalho {
@@ -64,6 +64,10 @@ header {
     padding-left: 1rem;
 }
 
+#logoMobile {
+    display: none;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -71,7 +75,8 @@ header {
 }
 
 .body {
-    background-color: rgb(162, 180, 185);    width: 90vw;
+    background-color: rgb(162, 180, 185);
+    width: 90vw;
     height: 60vh;
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
@@ -96,6 +101,7 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .box {
@@ -110,22 +116,16 @@ aside {
     margin-top: 1rem;
 }
 
-#question-title { 
+#question-title {
     font-size: 1.5rem;
 }
-
-#img {
-    width: 25rem;
-    height: 15rem;
-    padding: 1.8rem;
-}
-
 
 .options {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 60vw;
     gap: 0.8rem;
+    margin-top: 30px;
 }
 
 .question-options {
@@ -144,7 +144,7 @@ aside {
     background-color: blue;
 }
 
-.option--orange{
+.option--orange {
     background-color: orange;
 }
 
@@ -173,9 +173,10 @@ aside {
 
 footer {
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     align-items: flex-end;
     margin-top: 190px;
+    color: white;
 }
 
 .user {

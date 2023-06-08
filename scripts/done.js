@@ -3,7 +3,9 @@ const user = localStorage.getItem("user")
 const score = localStorage.getItem("score")
 
 document.querySelector("#userName").innerHTML = `${user}'s score:`
-document.querySelector("#score").innerHTML = score
+console.log(score)
+document.querySelector("#score").innerHTML = score || 0 
+
 // localStorage application
 
 // buttons section

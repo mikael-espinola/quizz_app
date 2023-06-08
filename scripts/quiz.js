@@ -6,17 +6,16 @@ function renderQuestion(question, onSelectQuestion) {
         return buildOptionObj(answer, false)
     })
     const correct_answer = buildOptionObj(question.correct_answer, true)
-    
+
     const options = [...incorrect_answers, correct_answer].sort(() => Math.random() - 0.5);
-    
+
     document.getElementById("question-title").innerHTML = title;
-    updateScore()
     questionManipulator(options, onSelectQuestion)
 }
 
 const userName = localStorage.getItem("user")
-    console.log(userName)
-    document.querySelector("#userName").innerHTML = `Let's play, ${userName}!`
+document.querySelector("#userName").innerHTML = `Let's play, ${userName}!`
+
 
 
 function questionManipulator(options, onSelectQuestion) {
@@ -46,17 +45,15 @@ function updateScore() {
 let score = 0;
 
 function onSelectQuestion(option) {
-    const newQuestion = questions.splice(0, 1)[0]
-    console.log(newQuestion)
     if (option.isCorrect === true) {
         score += 5;
-        renderQuestion(newQuestion, onSelectQuestion);
-    } else if (option.isCorrect !== true) {
-        renderQuestion(newQuestion, onSelectQuestion);
-    } else {
-        score = 0;
-        renderQuestion(newQuestion, onSelectQuestion);
+        updateScore()
     }
+    if (questions.length === 0) {
+        window.location.href = "finalScore.html"
+    } 
+    const newQuestion = questions.splice(0, 1)[0]
+    renderQuestion(newQuestion, onSelectQuestion);
 }
 
 function buildOptionObj(option, isCorrect) {
@@ -69,7 +66,7 @@ const modal = document.querySelector(".modal")
 
 const doneBtn = document.querySelector("#doneBtn")
 doneBtn.addEventListener("click", () => {
-    window.location.href = "donePage.html"
+    window.location.href = "finalScore.html"
 })
 // checkout section 
 
@@ -100,23 +97,27 @@ window.addEventListener('offline', () => {
 
 
 async function init() {
-   
-    const response = await fetch(url)
-    const data = await response.json()
-    const status = await response.status
-    questions = data.results
-    console.log(questions)
+    try {
+        const response = await fetch(url)
+        const data = await response.json()
+        const status = await response.status
+        questions = data.results
 
-    setTimeout(() => {
-        loading.classList.add("active")
-        if(status !== 200) {
-            alert("Connection Error. Please, try again.")
-            window.window.location.href = "index.html";
-        }
-    }, 1000)
+        setTimeout(() => {
+            loading.classList.add("active")
+            if (status !== 200) {
+                alert("Connection Error. Please, try again.")
+                window.window.location.href = "index.html";
+            }
+        }, 1000)
 
-    const newQuestion = questions.splice(0, 1)[0]
-    renderQuestion(newQuestion, onSelectQuestion)
+        const newQuestion = questions.splice(0, 1)[0]
+        renderQuestion(newQuestion, onSelectQuestion)
+    } catch (e) {
+        alert(`Connection Error. Please, try again. Error: ${e.message}`)
+        window.location.href = "index.html";
+        
+    }
 }
 
 init()
