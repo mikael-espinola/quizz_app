@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./styles/quiz.css">
+    <link rel="stylesheet" href="styles/loadingStyle.css">
+    <link rel="stylesheet" href="styles/mediaQuiz.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<header>
+    <img id="img-capa" src="./assets/imgs/capa-login.jpg" alt="">
+    <div id="cabecalho">
+        <img id="logo" src="./assets/imgs/Captura de tela 2023-04-09 120040.png" alt="Logo">
+        <img id="logoMobile" src="./assets/imgs/kahootIconMobile.png" alt="">
+        <div class="user">
+            <i class="fa-solid fa-face-smile-beam"></i>
+            <label id="userName"></label>
+        </div>
+        <div class="header-btn">
+            <button id="exitBtn" class="btn1">Exit</button>
+            <button id="doneBtn" class="btn1">Done!</button>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="body">
+            <aside class="score">
+                <h2>SCORE</h2>
+                <h3 id="current-score">0</h3>
+            </aside>
+            <main id="quiz">
+                <div class="box">
+                    <h1 id="question-title"></h1>
+                </div>
+                <div class="options">
+                    <button id="option--red" class="btn question-options option--red "></button>
+                    <button id="option--blue" class="btn question-options option--blue "></button>
+                    <button id="option--orange" class="btn question-options option--orange "></button>
+                    <button id="option--green" class="btn question-options option--green "></button>
+                </div>
+            </main>
+            <aside class="helper theCards">
+                <div></div>
+                <button class="btn1 option--red">WILD CARD</button>
+                <button class="btn1 option--blue">SOMEONE TO HELP</button>
+                <button class="btn1 option--orange">THX, NEXT</button>
+                <button class="btn1 option--green">SHOW UP!</button>
+            </aside>
+        </div>
+        <div class="modal">
+            <section class="modalText">
+                <h1>Are you sure you want to quit?</h1>
+            </section>
+            <div class="modalBtns">
+                <input id="yesBtn" type="button" value="YES">
+                <input id="noBtn" type="button" value="NO">
+            </div>
+        </div>
+    </div>
+
+    <div class="loading">
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+</body>
+
+<footer class="footer">
+    <h5>Created by Mikael Espinola © 2023</h4>
+</footer>
+
+<script src="./scripts/quiz.js"></script>
+
+</html>

@@ -6,25 +6,34 @@
   <title>Quiz app</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
-  <script src='scripts/main.js' type="module"></script>
 </head>
 <body>
+  <img id="img-capa" src="./assets/imgs/capa-login.jpg" alt="">
   <header>
     <h1>Quiz de perguntas</h1>
   </header>
   <main class="user-form">
     <form id="formulario_usuario">
-      <h2>Por favor, identifique-se</h2>
-      <label>
+      <h2 class="colorFont">Por favor, identifique-se</h2>
+      <label class="colorFont">
         First name
-        <input name="firstname" required="required" />
+        <input id="name" name="firstname" required="required" />
       </label>
-      <label>
+      <label class="colorFont">
         Email
-        <input name="email" required="required" type="email" />
+        <input id="email" name="email" required="required" type="email" />
       </label>
-      <button type="submit">Start</button>
+      <label class="colorFont">
+        Nº of Questions:
+        <input id="quantity" name="quantity" type="number" value="10" min="1" max="50" />
+      </label>
+      <button id="startBtn" type="submit">Start</button>
     </form>
   </main>
 </body>
+<footer class="footer">
+  <h5>Created by Mikael Espinola © 2023</h4>
+</footer>
+
+<script src="./scripts/login.js"></script>
 </html>

@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+body {
+    background-color: rgba(220, 227, 229, 0.501);
+    height: 100%;
+    width: 100%;
+}
+
+#img-capa {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+
+}
+
+#cabecalho {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    background-color: #FFF;
+    box-shadow: 10px 5px 5px rgb(212, 207, 207);
+}
+
+.header-btn {
+    display: flex;
+    align-items: center;
+}
+
+#exitBtn {
+    margin-right: 5rem;
+    background-color: rgb(201, 94, 94);
+}
+
+#doneBtn {
+    margin-right: 1.5rem;
+    background-color: rgb(96, 218, 155);
+}
+
+.btn1 {
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    margin: 3px 0px 3px 0px;
+}
+
+#logo {
+    width: 10rem;
+    height: 3.7rem;
+    padding-left: 1rem;
+}
+
+#logoMobile {
+    display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-height: 50vh;
+}
+
+.body {
+    background-color: rgb(162, 180, 185);
+    width: 90vw;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+
+aside {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    font-family: 'Pangolin', cursive;
+}
+
+#current-score {
+    padding: 0.9rem;
+    margin-top: 0.5rem;
+    font-family: 'Pangolin', cursive;
+}
+
+#quiz {
+    background-color: rgb(220, 227, 229);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20%;
+    width: 90%;
+    box-shadow: 10px 5px 5px rgb(212, 207, 207);
+    background-color: #FFF;
+    margin-top: 1rem;
+}
+
+#question-title {
+    font-size: 1.5rem;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60vw;
+    gap: 0.8rem;
+    margin-top: 30px;
+}
+
+.question-options {
+    display: flex;
+    justify-content: center;
+    padding: 1.8rem;
+    align-items: center;
+    border-radius: initial;
+}
+
+.option--red {
+    background-color: rgb(214, 48, 48);
+}
+
+.option--blue {
+    background-color: blue;
+}
+
+.option--orange {
+    background-color: orange;
+}
+
+.option--green {
+    background-color: green;
+}
+
+.helper {
+    height: 55%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.btn {
+    padding: 1rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.btn:hover {
+    border: #151111 solid 3px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 190px;
+    color: white;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+#userName {
+    font-size: 20px;
+    font-family: 'Pangolin', cursive;
+    margin-left: 1rem;
+}
+
+.modal {
+    background-color: rgb(205, 127, 24);
+    width: 30rem;
+    height: 10rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modalText {
+    margin-bottom: 2rem;
+}
+
+.modalBtns {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#yesBtn,
+#noBtn {
+    padding: 3px;
+    width: 33%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal--active {
+    display: flex;
+}
